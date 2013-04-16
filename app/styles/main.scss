@@ -1,0 +1,242 @@
+// @import 'normalize-scss/normalize';
+@import 'sass-bootstrap/lib/bootstrap';
+@import 'bourbon/app/assets/stylesheets/_bourbon.scss';
+// font-family: 'Source Sans Pro', sans-serif;
+// font-family: 'Lato', sans-serif;
+// font-family: 'Economica', sans-serif;
+// font-family: 'Merriweather Sans', sans-serif;
+// X font-family: 'Sanchez', serif;
+// font-family: 'Oxygen', sans-serif;
+// font-family: 'Raleway', sans-serif;
+// font-family: 'Lobster', cursive;
+// font-family: 'Chivo', sans-serif;
+// font-family: 'Lobster Two', cursive;
+
+$header-height: 70px;
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: normal;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  background: url("/images/wood.jpg") repeat 0 0;
+  margin-bottom: 130px;
+}
+a {
+  color: #fff;
+  text-decoration: underline;
+  &:focus, &:hover, &:active {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+.wrapper {
+  background: #fafafa;
+}
+.container {
+  width: 80%;
+}
+#site-header {  // on scroll, make this opaque?
+  @include clearfix;
+  padding: 5px 0;
+  background: #454545;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  h1 {
+		padding: 8px 8px;
+    float: left;
+    // color: #38847f;
+		font-family: "Chivo"; 
+		font-size: 2.2em; 
+		font-weight: normal;
+		color: #005d5a;
+    background: rgba(255,255,255,.3) url("/images/wood.jpg") repeat fixed 0 0;  // really dying to do the transparnecy trick here.
+    // box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3) inset;
+    // border-radius: 4px;
+		margin: 0;
+		border: 1px rgba(0,0,0,.5) solid;
+    em {
+      // color: #9cf5ff;
+			// color: #59a1a1;
+      color: #dd543e;
+			
+			font-style: normal;
+			margin-right: -9px;
+    }
+		span {
+			display: none;
+		}
+  }
+  margin-bottom: 30px;
+}
+#primary-nav {
+	ul {
+		margin: 0;
+	}
+	li {
+		float: right;
+		margin: 0em .5em;
+		padding: 0;
+	}
+	a {
+		text-indent: -9999px;
+		border-radius: 30px;
+		border: 2px solid #b15122;
+		padding: .5em .5em;
+		display: block;
+		width: 40px;
+		height: 40px;
+		background-color:  rgba(177, 81, 34, .3);
+		background-repeat: no-repeat;
+		background-position: .5em .8em;
+		opacity: .8;
+		&.twitter {
+			background-image: url('../images/twitter.png');
+		}
+		&.github {
+			background-image: url('../images/octocat.png');
+		}
+		&.blog {
+			background-image: url('../images/blog.png');
+			background-position: .7em .5em;
+		}
+		&:hover {
+      background-color:  rgba(177, 81, 34, .6);
+      opacity: 1;
+		}
+	}
+}
+.lead {
+  padding: 2em 1em;
+  position: relative;
+  margin-bottom: 200px;
+  top: 140px;
+  width: 60%;
+  border-radius: 4px;
+  background: rgba(0,0,0,.2);
+   h2 {
+    // font-family: 'Lobster', cursive;
+    font-weight: 700;
+  } 
+}
+.portfolio-piece {
+  margin: 5em 0;
+  header {
+    p { margin: .5em 0; padding: 0;}
+    background: #c74c38;
+    padding: 1em 2%;
+    margin: 1em -.5em 0;
+    text-transform: uppercase;
+    color: #fff;
+    position: relative;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    &:before, &:after {
+      position: absolute;
+      bottom: -20px;
+      right: 30px;
+      content: " ";
+    	width: 0; 
+    	height: 0; 
+    	border-left: 20px solid transparent;
+    	border-right: 20px solid transparent;
+    	border-top: 20px solid #c74c38;
+    	background: transparent;
+    }
+    &:before {
+      bottom: -22px;
+      border-top: 20px solid rgba(0,0,0,.2);
+    }
+  }
+  .pullquote-container {
+    background: transparent url("/images/portfolio/portfolio-ce.jpg") 0 0 no-repeat;
+    content: "";
+    display: block;
+    height: 600px;
+    box-sizing: border-box;
+    background-size: 80%;  //cover 80% 100% recut this image.
+    background-position: center $header-height;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3) inset;
+  }
+  h2 {
+    font-size: 3em;
+    width: 60%;
+  }
+  blockquote {
+    position: relative;
+    padding: 35px 65px;
+    background: #fafafa; // 0f5a58turquoise
+    margin: 0;
+    // color: #fff;
+    margin: 0 -.5em;
+    border-left: none;
+    p {
+      line-height: 1.5;
+      margin: .5em 0;
+    }
+    &:before {
+      content: "“ ";
+      font-size: 8em;
+      // color: #004a48;
+      color: rgba(0,0,0,.3);
+      font-family: "Sanchez", serif;
+      position: absolute;
+      left: .8%;
+      top: 55px;
+    }
+    &:after {
+      content: " ”";
+      font-size: 8em;
+      // color: #004a48;
+      color: rgba(0,0,0,.3);
+      font-family: "Sanchez", serif;
+      position: absolute;
+      right: .8%;
+      bottom: -5px;
+    }
+  }
+}
+#old-spice {
+  .pullquote-container {
+    background: #fff url("../images/perpetual_love/4.jpg") 0 0 no-repeat;
+    background-size: 80% 100%;
+    background-position: center $header-height;    
+    background-attachment: fixed;
+  }
+}
+#leatherman {
+  .pullquote-container {
+    background-image: url("../images/portfolio/portfolio-leatherman2.jpg");
+  }
+}
+#sc {
+  .pullquote-container {
+    background-color: #fff;
+    background-image: url("../images/portfolio/portfolio-sc.jpg");
+  }
+}
+#g2g {
+  .pullquote-container {
+    background-image: url("../images/portfolio/portfolio-g2g.jpg");
+  }
+}
+#dd {
+  .pullquote-container {
+    background-image: url("../images/portfolio/portfolio-dd.jpg");
+  }
+}
+#carrier {
+  .pullquote-container {
+    background-image: url("../images/portfolio/portfolio-carrier2.jpg");
+  }
+}
+#wb {
+  .pullquote-container {
+    background-image: url("../images/portfolio/portfolio-weatherbest.jpg");
+  }
+}
+
