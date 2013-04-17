@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 body {
   font-family: 'Lato', sans-serif;
   background: url("/images/wood.jpg") repeat 0 0;
-  margin-bottom: 130px;
+  margin-bottom: 220px;
 }
 a {
   color: #fff;
@@ -52,12 +52,14 @@ a {
 		font-family: "Chivo"; 
 		font-size: 2.2em; 
 		font-weight: normal;
-		color: #005d5a;
+		color: rgba(0,0,0,.7);
+    // color: #005d5a; turquoise
     background: rgba(255,255,255,.3) url("/images/wood.jpg") repeat fixed 0 0;  // really dying to do the transparnecy trick here.
     // box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3) inset;
-    // border-radius: 4px;
-		margin: 0;
+    border-radius: 2px;
+    margin: 0;
 		border: 1px rgba(0,0,0,.5) solid;
+		
     em {
       // color: #9cf5ff;
 			// color: #59a1a1;
@@ -70,11 +72,14 @@ a {
 			display: none;
 		}
   }
-  margin-bottom: 30px;
+  &.shrink {
+    
+  }
 }
 #primary-nav {
 	ul {
 		margin: 0;
+		padding-top: .3em;
 	}
 	li {
 		float: right;
@@ -85,13 +90,14 @@ a {
 		text-indent: -9999px;
 		border-radius: 30px;
 		border: 2px solid #b15122;
-		padding: .5em .5em;
+		padding: .2em .2em;
 		display: block;
 		width: 40px;
 		height: 40px;
 		background-color:  rgba(177, 81, 34, .3);
 		background-repeat: no-repeat;
-		background-position: .5em .8em;
+		background-position: 54% 50%;
+		background-size: 60%;
 		opacity: .8;
 		&.twitter {
 			background-image: url('../images/twitter.png');
@@ -101,7 +107,9 @@ a {
 		}
 		&.blog {
 			background-image: url('../images/blog.png');
-			background-position: .7em .5em;
+			background-size: 59%;
+  		background-position: 62% 50%;
+      // background-position: .7em .5em;
 		}
 		&:hover {
       background-color:  rgba(177, 81, 34, .6);
@@ -115,7 +123,7 @@ a {
   margin-bottom: 200px;
   top: 140px;
   width: 60%;
-  border-radius: 4px;
+  border-radius: 2px;
   background: rgba(0,0,0,.2);
    h2 {
     // font-family: 'Lobster', cursive;
@@ -154,13 +162,14 @@ a {
     background: transparent url("/images/portfolio/portfolio-ce.jpg") 0 0 no-repeat;
     content: "";
     display: block;
-    height: 600px;
+    height: 450px;
     box-sizing: border-box;
+    overflow: hidden;
     background-size: 80%;  //cover 80% 100% recut this image.
     background-position: center $header-height;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3) inset;
+    // box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3) inset;
   }
   h2 {
     font-size: 3em;
@@ -200,12 +209,17 @@ a {
     }
   }
 }
+#ce-widget {
+  .pullquote-container {
+    background-image: url("../images/portfolio/portfolio-ce-widget.jpg");
+  }
+}
 #old-spice {
   .pullquote-container {
-    background: #fff url("../images/perpetual_love/4.jpg") 0 0 no-repeat;
-    background-size: 80% 100%;
-    background-position: center $header-height;    
-    background-attachment: fixed;
+    background-image: url("../images/perpetual_love/4.jpg");
+    // background-size: 80% 100%;
+    // background-position: center $header-height;    
+    // background-attachment: fixed;
   }
 }
 #leatherman {
