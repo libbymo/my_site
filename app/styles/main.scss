@@ -74,6 +74,7 @@ a {
 	ul {
 		margin: 0;
 		padding-top: .3em;
+		list-style-type: none;
 	}
 	li {
 		float: right;
@@ -81,6 +82,7 @@ a {
 		padding: 0;
 	}
 	a {
+		outline: none;
 		text-indent: -9999px;
 		border-radius: 30px;
 		border: 2px solid #b15122;
