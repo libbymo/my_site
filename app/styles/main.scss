@@ -48,23 +48,17 @@ a {
   h1 {
 		padding: 8px 8px;
     float: left;
-    // color: #38847f;
 		font-family: "Chivo"; 
 		font-size: 2.2em; 
 		font-weight: normal;
 		color: rgba(0,0,0,.7);
-    // color: #005d5a; turquoise
     background: rgba(255,255,255,.3) url("/images/wood.jpg") repeat fixed 0 0;  // really dying to do the transparnecy trick here.
-    // box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3) inset;
     border-radius: 2px;
     margin: 0;
 		border: 1px rgba(0,0,0,.5) solid;
-		
+		@include transition( all 0.3s);
     em {
-      // color: #9cf5ff;
-			// color: #59a1a1;
       color: #dd543e;
-			
 			font-style: normal;
 			margin-right: -9px;
     }
@@ -98,6 +92,8 @@ a {
 		background-repeat: no-repeat;
 		background-position: 54% 50%;
 		background-size: 60%;
+		@include transition( all 0.3s);
+		@include transition( "background-size", .8ms);
 		opacity: .8;
 		&.twitter {
 			background-image: url('../images/twitter.png');
@@ -109,6 +105,12 @@ a {
 			background-image: url('../images/blog.png');
 			background-size: 59%;
   		background-position: 62% 50%;
+      // background-position: .7em .5em;
+		}
+		&.linkedin {
+			background-image: url('../images/linkedin.png');
+			// background-size: 59%;
+  		// background-position: 59% 50%;
       // background-position: .7em .5em;
 		}
 		&:hover {
@@ -126,7 +128,6 @@ a {
   border-radius: 2px;
   background: rgba(0,0,0,.2);
    h2 {
-    // font-family: 'Lobster', cursive;
     font-weight: 700;
   } 
 }
@@ -169,7 +170,6 @@ a {
     background-position: center $header-height;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    // box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3) inset;
   }
   h2 {
     font-size: 3em;
@@ -217,9 +217,6 @@ a {
 #old-spice {
   .pullquote-container {
     background-image: url("../images/perpetual_love/4.jpg");
-    // background-size: 80% 100%;
-    // background-position: center $header-height;    
-    // background-attachment: fixed;
   }
 }
 #leatherman {
@@ -254,3 +251,43 @@ a {
   }
 }
 
+@media all and (min-width: 300px) and (max-width: 400px) {
+	.container {
+		max-width: 320px;
+	}
+	.lead {
+		width: 95%;
+		padding: .5em 2%;
+	}
+	.portfolio-piece, header {
+		padding: .5em 0;
+	}
+	.portfolio-piece blockquote {
+		padding: 10px 25px;
+		&:before, &:after {
+			font-size: 4em;
+			top: 20px;
+		}
+		&:after {
+			top: auto;
+			bottom: 0;
+		}
+	}
+	#site-header {
+		h1 {
+			font-size: 2em;
+			padding: 4px;
+		}	
+	}
+	#primary-nav {
+		a { 
+			background-size: 40%;
+			border-radius: 20px;
+			border: 2px solid #b15122;
+			padding: .2em .2em;
+			display: block;
+			width: 30px;
+			height: 30px;
+		}
+	}
+}
